@@ -4,7 +4,7 @@ import "./globals.css";
 import NavBar from "./components/NavBar";
 
 const kalnia = Kalnia({ subsets: ["latin"], weight: ["500", "600", "700"], variable: "--font-kalnia" });
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600"], variable: "--font-poppins" });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600", "700", "800"], variable: "--font-poppins" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
