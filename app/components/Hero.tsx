@@ -36,7 +36,7 @@ const Hero = () => {
           alt={news[0]?.title}
         />
         <div className="absolute bottom-0 bg-gradient-to-t w-full h-[150px] from-black to-transparent p-8 text-white">
-          <h2 className="text-3xl font-bold mt-10">
+          <h2 className="text-3xl font-bold">
             {shortenTitle(news[0]?.title, 60)}
           </h2>
           <p className="text-sm italic">

@@ -5,7 +5,7 @@ import NewsBox from "./NewsBox";
 
 interface NewsArticle {
   title: string;
-  urlToImage: string;
+  urlToImage?: string | null;
   url: string;
   content: string;
 }
@@ -40,12 +40,18 @@ function NewsList() {
   if (loading) return <p>Loading News...</p>;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+    <div>
+      <div className="my-8">
+      <h1 className="text-4xl kalnia font-bold">Top Trending News</h1>
+      </div>
+    <div className="flex flex-wrap gap-8">
 
-      {news.map((article, index) => (
-        <NewsBox key={index} title={shortenTitle(article.title, 50)} image={article.urlToImage} url={article.url} content={article.content} />
+      {news.map((article, index) => (<div key={index}>
+        <NewsBox key={index} title={shortenTitle(article.title, 40)} image={article.urlToImage} url={article.url} content={article.content} />
+        </div>
       ))}
 
+    </div>
     </div>
   );
 }
